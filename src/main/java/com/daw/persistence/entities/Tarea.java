@@ -19,14 +19,15 @@ public class Tarea {
 	
 	@Id
 	@GeneratedValue(strategy= GenerationType.IDENTITY)
+	@Column(name="id_tarea")
 	private int id;
 	private String titulo;
 	private String descripcion;
 	
-	@Column(name = "fecha_creacion")
+	@Column(name = "creacion")
 	private LocalDate fechaCreacion;
 	
-	@Column(name = "fecha_vencimiento")
+	@Column(name = "vencimiento")
 	private LocalDate fechaVencimiento;
 	
 	@Enumerated(EnumType.STRING)
